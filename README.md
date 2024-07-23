@@ -16,7 +16,6 @@ _Function: Generates control signals based on the instruction opcode to coordina
 <br/>
 **Instruction Execution** <br/>
 In a single clock cycle, the following sequence occurs:<br/>
-
 1.The PC provides the address to the instruction memory.<br/>
 2.The instruction memory outputs the instruction.<br/>
 3.The instruction is decoded, and control signals are generated.<br/>
