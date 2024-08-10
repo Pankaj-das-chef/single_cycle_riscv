@@ -14,7 +14,7 @@ _Function: Stores and retrieves data required by load and store instructions. It
 6.Control Unit:<br />
 _Function: Generates control signals based on the instruction opcode to coordinate the operation of other components. It determines the type of instruction and controls the data paths accordingly._ <br />
 <br/>
-##Instruction Execution <br/>
+##Instruction Execution
 In a single clock cycle, the following sequence occurs:<br/>
 1.The PC provides the address to the instruction memory.<br/>
 2.The instruction memory outputs the instruction.<br/>
