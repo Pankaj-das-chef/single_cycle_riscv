@@ -1,0 +1,29 @@
+`timescale 1ns / 1ps
+
+module Data_Memory(clk,rst,WE,WD,A,RD);
+
+    input clk,rst,WE;
+    input [31:0]A,WD;
+    
+    output [31:0]RD;
+
+    reg [31:0] mem [1023:0];
+
+    always @ (posedge clk)
+    begin
+        if(WE)
+           begin
+            mem[A] <= WD;
+           end
+    end
+
+    //read
+    assign RD = (~rst) ? 32'd0 : mem[A];
+
+    initial begin
+        mem[28] = 32'h00000020;
+        //mem[40] = 32'h00000002;
+    end
+
+
+endmodule
